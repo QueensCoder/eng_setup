@@ -1,0 +1,64 @@
+#!/bin/bash
+
+
+
+echo "preparing howl installs"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+brew tap homebrew/cask
+
+
+# Dev Tools
+echo "Installing development tools..."
+brew install --cask docker
+brew install git
+brew install --cask pycharm
+brew install --cask visual-studio-code
+brew install --cask webstorm
+brew install --cask iterm2
+brew install awscli
+brew install okta-awscli
+brew install kubectl
+
+# Communication Apps
+echo "Installing communication apps..."
+brew install --cask zoom
+
+# Web Tools
+echo "Installing web tools..."
+brew install node
+brew install n
+brew install pnpm
+brew install --cask postman
+
+
+# Other
+echo "Installing everything else..."
+brew install --cask spotify
+
+
+# aliases
+echo "preparing git alias"
+
+git config --global alias.co checkout
+git config --global alias.br branch
+git config --global alias.ci commit
+git config --global alias.st status
+git config --global alias.pom "pull origin master"
+git config --global alias.rbm "rebase master"
+git config --global alias.com "checkout master"
+git config --global alias.pm "pull origin main"
+git config --global alias.rbme "rebase main"
+git config --global alias.come "checkout main"
+git config --global alias.cob "checkout -b"
+git config --global alias.del "branch -D"
+git config --global alias.sq "rebase -i HEAD~"
+git config --global alias.am "commit --amend"
+git config --global alias.burn "!git branch | grep -v "master" | xargs git branch -D"
+git config --global alias.burnfe "!git branch | grep -v "main" | xargs git branch -D"
+
+
+echo "completed"
+
+echo "completed"
+
+
